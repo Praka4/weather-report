@@ -162,5 +162,18 @@
             <p>&copy; 2025 Weather Report. All rights reserved.</p>
         </div>
     </footer>
+        <script>
+        const mapContainer = document.getElementById('mapContainer');
+        const pin = document.getElementById('pin');
+
+        mapContainer.addEventListener('click', (event) => {
+            const rect = mapContainer.getBoundingClientRect();
+            const offsetX = event.clientX - rect.left;
+            const offsetY = event.clientY - rect.top;
+
+            pin.style.left = ${offsetX}px;
+            pin.style.top = ${offsetY}px;
+        });
+    </script>
 </body>
 </html>
