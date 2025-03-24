@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive World Map - Weather Locator</title>
+    <title> Weather Report</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -115,7 +115,7 @@
     <div class="weather-cards">
 
         <div class="weather-card">
-            <h2>New York</h2>
+            <h2>India</h2>
             <img class="weather-icon" src="https://cdn-icons-png.flaticon.com/128/869/869869.png" alt="Sunny">
             <p>Temperature: 24°C</p>
             <p>Condition: Sunny</p>
@@ -162,19 +162,5 @@
             <p>&copy; 2025 Weather Report. All rights reserved.</p>
         </div>
     </footer>
-
-    <script>
-        const mapContainer = document.getElementById('mapContainer');
-        const pin = document.getElementById('pin');
-
-        mapContainer.addEventListener('click', (event) => {
-            const rect = mapContainer.getBoundingClientRect();
-            const offsetX = event.clientX - rect.left;
-            const offsetY = event.clientY - rect.top;
-
-            pin.style.left = `${offsetX}px`;
-            pin.style.top = `${offsetY}px`;
-        });
-    </script>
 </body>
 </html>
